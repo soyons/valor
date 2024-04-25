@@ -1,153 +1,364 @@
 <h1 align="center">
   phidata
 </h1>
+
 <h3 align="center">
-  A collection of AI Apps that you can run with 1 command 🚀
+Phidata adds memory, knowledge and tools to LLMs
 </h3>
-<p align="center">
-  ⭐️ it for when you need to spin up an AI project quickly.
-</p>
-<p align="center">
-<a href="https://python.org/pypi/phidata" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/pypi/v/phidata?color=blue&label=version" alt="version">
-</a>
-<a href="https://github.com/phidatahq/phidata" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/python->=3.9-blue" alt="pythonversion">
-</a>
-<a href="https://github.com/phidatahq/phidata" target="_blank" rel="noopener noreferrer">
-    <img src="https://pepy.tech/badge/phidata" alt="downloads">
-</a>
-<a href="https://github.com/phidatahq/phidata/actions/workflows/build.yml" target="_blank" rel="noopener noreferrer">
-    <img src="https://github.com/phidatahq/phidata/actions/workflows/build.yml/badge.svg" alt="build-status">
-</a>
-</p>
 
-## ⭐ Features:
-- **Powerful:** Get a production-ready LLM App with 1 command.
-- **Simple**: Built using a human-like `Conversation` interface to language models.
-- **Local first**: Your app runs locally on docker with 1 command.
-- **Production Ready:** Your app can be deployed to aws with 1 command.
+![image](https://github.com/phidatahq/phidata/assets/22579644/295187f6-ac9d-41e0-abdb-38e3291ad1d1)
 
-## 🚀 How it works
+## Why phidata
 
-- Create your codebase using a template: `phi ws create`
-- Run your app locally: `phi ws up dev:docker`
-- Run your app on AWS: `phi ws up prd:aws`
+**Problem:** LLMs have limited context and cannot take actions.<br />
+**Solution:** Add memory, knowledge and tools.
+- **Memory:** Enables LLMs to have long-term conversations by storing **chat history** in a database.
+- **Knowledge:** Provides LLMs with **business context** by storing information in a vector database.
+- **Tools:** Enable LLMs to **take actions** like pulling data from an API, sending emails or querying a database.
 
-## 💻 Quickstart: Build a RAG LLM App
+Memory & knowledge make LLMs **smarter** while tools make them **autonomous**.
 
-Let's build a **RAG LLM App** with GPT-4. We'll use PgVector for Knowledge Base and Storage and serve the app using Streamlit and FastApi. Read the full tutorial <a href="https://docs.phidata.com/examples/rag-llm-app" target="_blank" rel="noopener noreferrer">here</a>.
+## How it works
 
-> Install <a href="https://docs.docker.com/desktop/install/mac-install/" target="_blank" rel="noopener noreferrer">docker desktop</a> to run this app locally.
+- **Step 1:** Create an `Assistant`
+- **Step 2:** Add Tools (functions), Knowledge (vectordb) and Storage (database)
+- **Step 3:** Serve using Streamlit, FastApi or Django to build your AI application
 
-### Installation
 
-Open the `Terminal` and create an `ai` directory with a python virtual environment.
+## Installation
+
+```shell
+pip install -U phidata
+```
+
+## Example: Assistant that can search the web
+
+Create a file `assistant.py`
+
+```python
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
+
+assistant = Assistant(tools=[DuckDuckGo()], show_tool_calls=True)
+assistant.print_response("Whats happening in France?", markdown=True)
+```
+
+Install libraries
+
+```shell
+pip install openai duckduckgo-search
+```
+
+Export your OPENAI_API_KEY
+
+```shell
+export OPENAI_API_KEY=sk-xxxx
+```
+
+Run the `Assistant` and let it search the web using `DuckDuckGo`
+
+```shell
+python assistant.py
+```
+
+## Next Steps
+
+1. Read the <a href="https://docs.phidata.com/basics" target="_blank" rel="noopener noreferrer">basics</a> to learn more about phidata.
+2. Read about <a href="https://docs.phidata.com/assistants/introduction" target="_blank" rel="noopener noreferrer">Assistants</a> and how to customize them.
+3. Checkout the <a href="https://docs.phidata.com/examples/cookbook" target="_blank" rel="noopener noreferrer">cookbook</a> for in-depth examples and code.
+
+## Documentation
+
+- You can find the full documentation <a href="https://docs.phidata.com" target="_blank" rel="noopener noreferrer">here</a>
+- You can also chat with us on <a href="https://discord.gg/4MtYHHrgA8" target="_blank" rel="noopener noreferrer">discord</a>
+
+## Demos
+
+Checkout the following AI Applications built using phidata:
+
+- <a href="https://pdf.aidev.run/" target="_blank" rel="noopener noreferrer">PDF AI</a> that summarizes and answers questions from PDFs.
+- <a href="https://arxiv.aidev.run/" target="_blank" rel="noopener noreferrer">ArXiv AI</a> that answers questions about ArXiv papers using the ArXiv API.
+- <a href="https://hn.aidev.run/" target="_blank" rel="noopener noreferrer">HackerNews AI</a> summarize stories, users and shares what's new on HackerNews.
+
+## More Examples
+
+### Assistant that can write and run python code
+
+<details>
+
+<summary>Show details</summary>
+
+The `PythonAssistant` can achieve tasks by writing and running python code.
+
+- Create a file `python_assistant.py`
+
+```python
+from valor.assistant.python import PythonAssistant
+from valor.file.local.csv import CsvFile
+
+python_assistant = PythonAssistant(
+    files=[
+        CsvFile(
+            path="https://phidata-public.s3.amazonaws.com/demo_data/IMDB-Movie-Data.csv",
+            description="Contains information about movies from IMDB.",
+        )
+    ],
+    pip_install=True,
+    show_tool_calls=True,
+)
+
+python_assistant.print_response("What is the average rating of movies?", markdown=True)
+```
+
+- Install pandas and run the `python_assistant.py`
+
+```shell
+pip install pandas
+
+python python_assistant.py
+```
+
+</details>
+
+### Assistant that can analyze data using SQL
+
+<details>
+
+<summary>Show details</summary>
+
+The `DuckDbAssistant` can perform data analysis using SQL.
+
+- Create a file `data_assistant.py`
+
+```python
+import json
+from valor.assistant.duckdb import DuckDbAssistant
+
+duckdb_assistant = DuckDbAssistant(
+    semantic_model=json.dumps({
+        "tables": [
+            {
+                "name": "movies",
+                "description": "Contains information about movies from IMDB.",
+                "path": "https://phidata-public.s3.amazonaws.com/demo_data/IMDB-Movie-Data.csv",
+            }
+        ]
+    }),
+)
+
+duckdb_assistant.print_response("What is the average rating of movies? Show me the SQL.", markdown=True)
+```
+
+- Install duckdb and run the `data_assistant.py` file
+
+```shell
+pip install duckdb
+
+python data_assistant.py
+```
+
+</details>
+
+### Assistant that can generate pydantic models
+
+<details>
+
+<summary>Show details</summary>
+
+One of our favorite LLM features is generating structured data (i.e. a pydantic model) from text. Use this feature to extract features, generate movie scripts, produce fake data etc.
+
+Let's create an Movie Assistant to write a `MovieScript` for us.
+
+- Create a file `movie_assistant.py`
+
+```python
+from typing import List
+from pydantic import BaseModel, Field
+from rich.pretty import pprint
+from valor.assistant import Assistant
+
+class MovieScript(BaseModel):
+    setting: str = Field(..., description="Provide a nice setting for a blockbuster movie.")
+    ending: str = Field(..., description="Ending of the movie. If not available, provide a happy ending.")
+    genre: str = Field(..., description="Genre of the movie. If not available, select action, thriller or romantic comedy.")
+    name: str = Field(..., description="Give a name to this movie")
+    characters: List[str] = Field(..., description="Name of characters for this movie.")
+    storyline: str = Field(..., description="3 sentence storyline for the movie. Make it exciting!")
+
+movie_assistant = Assistant(
+    description="You help write movie scripts.",
+    output_model=MovieScript,
+)
+
+pprint(movie_assistant.run("New York"))
+```
+
+- Run the `movie_assistant.py` file
+
+```shell
+python movie_assistant.py
+```
+
+- The output is an object of the `MovieScript` class, here's how it looks:
+
+```shell
+MovieScript(
+│   setting='A bustling and vibrant New York City',
+│   ending='The protagonist saves the city and reconciles with their estranged family.',
+│   genre='action',
+│   name='City Pulse',
+│   characters=['Alex Mercer', 'Nina Castillo', 'Detective Mike Johnson'],
+│   storyline='In the heart of New York City, a former cop turned vigilante, Alex Mercer, teams up with a street-smart activist, Nina Castillo, to take down a corrupt political figure who threatens to destroy the city. As they navigate through the intricate web of power and deception, they uncover shocking truths that push them to the brink of their abilities. With time running out, they must race against the clock to save New York and confront their own demons.'
+)
+```
+
+</details>
+
+### PDF Assistant with Knowledge & Storage
+
+<details>
+
+<summary>Show details</summary>
+
+Lets create a PDF Assistant that can answer questions from a PDF. We'll use `PgVector` for knowledge and storage.
+
+**Knowledge Base:** information that the Assistant can search to improve its responses (uses a vector db).
+
+**Storage:** provides long term memory for Assistants (uses a database).
+
+1. Run PgVector
+
+Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **PgVector** on port **5532** using:
 
 ```bash
-mkdir ai && cd ai
-
-python3 -m venv aienv
-source aienv/bin/activate
+docker run -d \
+  -e POSTGRES_DB=ai \
+  -e POSTGRES_USER=ai \
+  -e POSTGRES_PASSWORD=ai \
+  -e PGDATA=/var/lib/postgresql/data/pgdata \
+  -v pgvolume:/var/lib/postgresql/data \
+  -p 5532:5432 \
+  --name pgvector \
+  phidata/pgvector:16
 ```
 
-Install phidata
+2. Create PDF Assistant
 
-```bash
-pip install phidata
+- Create a file `pdf_assistant.py`
+
+```python
+import typer
+from rich.prompt import Prompt
+from typing import Optional, List
+from valor.assistant import Assistant
+from valor.storage.assistant.postgres import PgAssistantStorage
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
+
+db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
+
+knowledge_base = PDFUrlKnowledgeBase(
+    urls=["https://phi-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf"],
+    vector_db=PgVector2(collection="recipes", db_url=db_url),
+)
+# Comment out after first run
+knowledge_base.load()
+
+storage = PgAssistantStorage(table_name="pdf_assistant", db_url=db_url)
+
+
+def pdf_assistant(new: bool = False, user: str = "user"):
+    run_id: Optional[str] = None
+
+    if not new:
+        existing_run_ids: List[str] = storage.get_all_run_ids(user)
+        if len(existing_run_ids) > 0:
+            run_id = existing_run_ids[0]
+
+    assistant = Assistant(
+        run_id=run_id,
+        user_id=user,
+        knowledge_base=knowledge_base,
+        storage=storage,
+        # Show tool calls in the response
+        show_tool_calls=True,
+        # Enable the assistant to search the knowledge base
+        search_knowledge=True,
+        # Enable the assistant to read the chat history
+        read_chat_history=True,
+    )
+    if run_id is None:
+        run_id = assistant.run_id
+        print(f"Started Run: {run_id}\n")
+    else:
+        print(f"Continuing Run: {run_id}\n")
+
+    # Runs the assistant as a cli app
+    assistant.cli_app(markdown=True)
+
+
+if __name__ == "__main__":
+    typer.run(pdf_assistant)
 ```
 
-### Create your codebase
+3. Install libraries
 
-Create your codebase using the `llm-app` template pre-configured with FastApi, Streamlit and PgVector. Use this codebase as a starting point for your LLM product.
-
-```bash
-phi ws create -t llm-app -n llm-app
+```shell
+pip install -U pgvector pypdf "psycopg[binary]" sqlalchemy
 ```
 
-This will create a folder named `llm-app`
+4. Run PDF Assistant
 
-### Serve your LLM App using Streamlit
-
-<a href="https://streamlit.io" target="_blank" rel="noopener noreferrer">Streamlit</a> allows us to build micro front-ends for our LLM App and is extremely useful for building basic applications in pure python. Start the `app` group using:
-
-```bash
-phi ws up --group app
+```shell
+python pdf_assistant.py
 ```
 
-**Press Enter** to confirm and give a few minutes for the image to download (only the first time). Verify container status and view logs on the docker dashboard.
+- Ask a question:
 
-### Example: Chat with PDFs
-
-- Open <a href="http://localhost:8501" target="_blank" rel="noopener noreferrer">localhost:8501</a> to view streamlit apps that you can customize and make your own.
-- Click on **Chat with PDFs** in the sidebar
-- Enter a username and wait for the knowledge base to load.
-- Choose the `RAG` Conversation type.
-- Ask "How do I make chicken curry?"
-- Upload PDFs and ask questions
-
-<img width="800" alt="chat-with-pdf" src="https://github.com/phidatahq/phidata/assets/22579644/a8eff0ac-963c-43cb-a784-920bd6713a48">
-
-### Serve your LLM App using FastApi
-
-Streamlit is great for building micro front-ends but any production application will be built using a front-end framework like `next.js` backed by a RestApi built using a framework like `FastApi`.
-
-Your LLM App comes ready-to-use with FastApi endpoints, start the `api` group using:
-
-```bash
-phi ws up --group api
+```
+How do I make pad thai?
 ```
 
-**Press Enter** to confirm and give a few minutes for the image to download.
+- See how the Assistant searches the knowledge base and returns a response.
 
-### View API Endpoints
+- Message `bye` to exit, start the assistant again using `python pdf_assistant.py` and ask:
 
-- Open <a href="http://localhost:8000/docs" target="_blank" rel="noopener noreferrer">localhost:8000/docs</a> to view the API Endpoints.
-- Load the knowledge base using `/v1/pdf/conversation/load-knowledge-base`
-- Test the `v1/pdf/conversation/chat` endpoint with `{"message": "How do I make chicken curry?"}`
-- The LLM Api comes pre-built with endpoints that you can integrate with your front-end.
-
-### Optional: Run Jupyterlab
-
-A jupyter notebook is a must have for AI development and your `llm-app` comes with a notebook pre-installed with the required dependencies. Enable it by updating the `workspace/settings.py` file:
-
-```python {{ title: 'workspace/settings.py'}}
-...
-ws_settings = WorkspaceSettings(
-    ...
-    # Uncomment the following line
-    dev_jupyter_enabled=True,
-...
+```
+What was my last message?
 ```
 
-Start `jupyter` using:
+See how the assistant now maintains storage across sessions.
 
+- Run the `pdf_assistant.py` file with the `--new` flag to start a new run.
 
-```bash
-phi ws up --group jupyter
+```shell
+python pdf_assistant.py --new
 ```
 
-**Press Enter** to confirm and give a few minutes for the image to download (only the first time). Verify container status and view logs on the docker dashboard.
+</details>
 
-### View Jupyterlab UI
+### Checkout the [cookbook](https://github.com/phidatahq/phidata/tree/main/cookbook) for more examples.
 
-- Open <a href="http://localhost:8888" target="_blank" rel="noopener noreferrer">localhost:8888</a> to view the Jupyterlab UI. Password: **admin**
-- Play around with cookbooks in the `notebooks` folder.
+## Looking to build an AI product?
 
-### Delete local resources
+We've helped many companies build AI products, the general workflow is:
 
-Play around and stop the workspace using:
+1. **Build an Assistant** with proprietary data to perform tasks specific to your product.
+2. **Connect your product** to the Assistant via an API.
+3. **Monitor and Improve** your AI product.
 
-```bash
-phi ws down
-```
+We also provide dedicated support and development, [book a call](https://cal.com/phidata/intro) to get started.
 
-### Run your LLM App on AWS
+## Contributions
 
-Read how to <a href="https://docs.phidata.com/guides/llm-app#run-on-aws" target="_blank" rel="noopener noreferrer">run your LLM App on AWS here</a>.
+We're an open-source project and welcome contributions, please read the [contributing guide](CONTRIBUTING.md) for more information.
 
-## 📚 More Information:
+## Request a feature
 
-- Read the <a href="https://docs.phidata.com" target="_blank" rel="noopener noreferrer">documentation</a>
-- Chat with us on <a href="https://discord.gg/4MtYHHrgA8" target="_blank" rel="noopener noreferrer">Discord</a>
-- Email us at <a href="mailto:help@phidata.com" target="_blank" rel="noopener noreferrer">help@phidata.com</a>
+- If you have a feature request, please open an issue or make a pull request.
+- If you have ideas on how we can improve, please create a discussion.
+
+## Roadmap
+
+Our roadmap is available <a href="https://github.com/orgs/phidatahq/projects/2/views/1" target="_blank" rel="noopener noreferrer">here</a>.
+If you have a feature request, please open an issue/discussion.
