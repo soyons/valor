@@ -1,11 +1,11 @@
 [project]
-name = "phidata"
-version = "2.3.82"
-description = "Add memory, knowledge and tools to LLMs."
+name = "valor"
+version = "1.0.0"
+description = "Init from phidata"
 requires-python = ">=3.8"
 readme = "README.md"
 authors = [
-  {name = "Ashpreet Bedi", email = "ashpreet@phidata.com"}
+  {name = "valor", email = "valor@valor.com"}
 ]
 
 dependencies = [
@@ -44,15 +44,15 @@ k8s = [
 phi = "valor.cli.entrypoint:phi_cli"
 
 [project.urls]
-homepage = "https://phidata.com"
-documentation = "https://docs.phidata.com"
+homepage = "https://valor.com"
+documentation = "https://docs.valor.com"
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["phi*"]
+include = ["valor*"]
 
 [tool.setuptools.package-data]
 phi = ["py.typed"]
@@ -62,11 +62,11 @@ testpaths = "tests"
 
 [tool.ruff]
 line-length = 120
-exclude = ["phienv*", "aienv*"]
+exclude = ["valorenv*", "aienv*"]
 # Ignore `F401` (import violations) in all `__init__.py` files
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-"phi/k8s/app/traefik/crds.py" = ["E501"]
+"valor/k8s/app/traefik/crds.py" = ["E501"]
 
 [tool.mypy]
 check_untyped_defs = true
