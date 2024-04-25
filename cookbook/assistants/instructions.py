@@ -1,4 +1,4 @@
-from phi.assistant import Assistant
+from valor.assistant import Assistant
 
 assistant = Assistant(
     description="You are a famous short story writer asked to write for a magazine",

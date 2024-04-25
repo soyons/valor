@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.tools.python import PythonTools
+from valor.assistant import Assistant
+from valor.tools.python import PythonTools
 
 assistant = Assistant(tools=[PythonTools()], show_tool_calls=True)
 assistant.print_response(

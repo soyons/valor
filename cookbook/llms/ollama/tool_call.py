@@ -1,7 +1,7 @@
 import typer
-from phi.assistant import Assistant
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.llm.ollama import OllamaTools
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.llm.ollama import OllamaTools
 
 
 def tool_call(model: str = "openhermes", debug: bool = False):

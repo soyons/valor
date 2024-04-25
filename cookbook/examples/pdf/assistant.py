@@ -2,10 +2,10 @@ import typer
 from rich.prompt import Prompt
 from typing import Optional, List
 
-from phi.assistant import Assistant
-from phi.storage.assistant.postgres import PgAssistantStorage
-from phi.knowledge.pdf import PDFUrlKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
+from valor.assistant import Assistant
+from valor.storage.assistant.postgres import PgAssistantStorage
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
 
 from resources import vector_db  # type: ignore
 

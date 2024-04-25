@@ -1,8 +1,8 @@
 import json
 import httpx
 
-from phi.assistant import Assistant
-from phi.llm.fireworks import Fireworks
+from valor.assistant import Assistant
+from valor.llm.fireworks import Fireworks
 
 
 def get_top_hackernews_stories(num_stories: int = 10) -> str:

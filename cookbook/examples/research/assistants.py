@@ -3,10 +3,10 @@ from typing import List
 from pathlib import Path
 
 from pydantic import BaseModel, Field
-from phi.assistant.team import Assistant
-from phi.tools.arxiv_toolkit import ArxivToolkit
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.tools.exa import ExaTools
+from valor.assistant.team import Assistant
+from valor.tools.arxiv_toolkit import ArxivToolkit
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.tools.exa import ExaTools
 
 arxiv_toolkit = ArxivToolkit(download_dir=Path(__file__).parent.parent.parent.parent.joinpath("wip", "arxiv_pdfs"))
 

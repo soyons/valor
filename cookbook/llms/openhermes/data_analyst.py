@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
-from phi.tools.duckdb import DuckDbTools
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
+from valor.tools.duckdb import DuckDbTools
 
 
 duckdb_tools = DuckDbTools(create_tables=False, export_tables=False, summarize_tables=False)

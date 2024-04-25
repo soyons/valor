@@ -1,5 +1,5 @@
 from rich.pretty import pprint
-from phi.assistant import Assistant, AssistantMemory
+from valor.assistant import Assistant, AssistantMemory
 
 assistant = Assistant()
 

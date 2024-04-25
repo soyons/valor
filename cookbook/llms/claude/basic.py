@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.anthropic import Claude
+from valor.assistant import Assistant
+from valor.llm.anthropic import Claude
 
 assistant = Assistant(
     llm=Claude(model="claude-3-haiku-20240307"),

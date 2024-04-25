@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.groq import Groq
+from valor.assistant import Assistant
+from valor.llm.groq import Groq
 
 assistant = Assistant(
     llm=Groq(model="mixtral-8x7b-32768"),

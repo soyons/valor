@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.llm.groq import Groq
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.llm.groq import Groq
 
 assistant = Assistant(
     llm=Groq(model="llama3-70b-8192"),

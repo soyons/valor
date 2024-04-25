@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from phi.assistant.duckdb import DuckDbAssistant
+from valor.assistant.duckdb import DuckDbAssistant
 
 duckdb_assistant = DuckDbAssistant(
     semantic_model=json.dumps(

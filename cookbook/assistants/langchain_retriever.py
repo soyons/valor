@@ -1,6 +1,6 @@
 from pathlib import Path
-from phi.assistant import Assistant
-from phi.knowledge.langchain import LangChainKnowledgeBase
+from valor.assistant import Assistant
+from valor.knowledge.langchain import LangChainKnowledgeBase
 
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.document_loaders import TextLoader

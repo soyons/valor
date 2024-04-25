@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.tools.zendesk import ZendeskTools
+from valor.assistant import Assistant
+from valor.tools.zendesk import ZendeskTools
 import os
 
 # Retrieve Zendesk credentials from environment variables

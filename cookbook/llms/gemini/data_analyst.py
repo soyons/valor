@@ -3,9 +3,9 @@ from textwrap import dedent
 from os import getenv
 
 import vertexai
-from phi.assistant import Assistant
-from phi.tools.duckdb import DuckDbTools
-from phi.llm.gemini import Gemini
+from valor.assistant import Assistant
+from valor.tools.duckdb import DuckDbTools
+from valor.llm.gemini import Gemini
 
 # *********** Initialize VertexAI ***********
 vertexai.init(project=getenv("PROJECT_ID"), location=getenv("LOCATION"))

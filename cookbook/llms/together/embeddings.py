@@ -1,4 +1,4 @@
-from phi.embedder.together import TogetherEmbedder
+from valor.embedder.together import TogetherEmbedder
 
 embeddings = TogetherEmbedder().get_embedding("Embed me")
 

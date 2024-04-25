@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.azure import AzureOpenAIChat
+from valor.assistant import Assistant
+from valor.llm.azure import AzureOpenAIChat
 
 assistant = Assistant(
     llm=AzureOpenAIChat(model="gpt-35-turbo"),  # model="deployment_name"

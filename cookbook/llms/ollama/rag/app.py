@@ -1,11 +1,11 @@
 from typing import List
 
 import streamlit as st
-from phi.assistant import Assistant
-from phi.document import Document
-from phi.document.reader.pdf import PDFReader
-from phi.document.reader.website import WebsiteReader
-from phi.utils.log import logger
+from valor.assistant import Assistant
+from valor.document import Document
+from valor.document.reader.pdf import PDFReader
+from valor.document.reader.website import WebsiteReader
+from valor.utils.log import logger
 
 from assistant import get_rag_assistant  # type: ignore
 

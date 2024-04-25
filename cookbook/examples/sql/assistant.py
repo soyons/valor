@@ -3,16 +3,16 @@ from typing import Optional
 from textwrap import dedent
 from pathlib import Path
 
-from phi.assistant import Assistant
-from phi.tools.sql import SQLTools
-from phi.tools.file import FileTools
-from phi.llm.openai import OpenAIChat
-from phi.embedder.openai import OpenAIEmbedder
-from phi.knowledge.json import JSONKnowledgeBase
-from phi.knowledge.text import TextKnowledgeBase
-from phi.knowledge.combined import CombinedKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
-from phi.storage.assistant.postgres import PgAssistantStorage
+from valor.assistant import Assistant
+from valor.tools.sql import SQLTools
+from valor.tools.file import FileTools
+from valor.llm.openai import OpenAIChat
+from valor.embedder.openai import OpenAIEmbedder
+from valor.knowledge.json import JSONKnowledgeBase
+from valor.knowledge.text import TextKnowledgeBase
+from valor.knowledge.combined import CombinedKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
+from valor.storage.assistant.postgres import PgAssistantStorage
 
 
 # ************* Database Connection *************

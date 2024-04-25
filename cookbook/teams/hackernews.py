@@ -1,8 +1,8 @@
 import json
 import httpx
 
-from phi.assistant.team import Assistant
-from phi.utils.log import logger
+from valor.assistant.team import Assistant
+from valor.utils.log import logger
 
 
 def get_top_hackernews_stories(num_stories: int = 10) -> str:

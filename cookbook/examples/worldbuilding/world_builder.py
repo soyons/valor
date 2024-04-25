@@ -1,6 +1,6 @@
 from typing import List
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
 from pydantic import BaseModel, Field
 from rich.pretty import pprint
 

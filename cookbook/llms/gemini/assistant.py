@@ -1,8 +1,8 @@
 from os import getenv
 
 import vertexai
-from phi.assistant import Assistant
-from phi.llm.gemini import Gemini
+from valor.assistant import Assistant
+from valor.llm.gemini import Gemini
 
 # *********** Initialize VertexAI ***********
 vertexai.init(project=getenv("PROJECT_ID"), location=getenv("LOCATION"))

@@ -8,10 +8,10 @@ The function takes a query and returns a list of references from the knowledge b
 import json
 from typing import List, Optional
 
-from phi.assistant import Assistant
-from phi.document import Document
-from phi.knowledge.pdf import PDFUrlKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
+from valor.assistant import Assistant
+from valor.document import Document
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
 
 db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
 

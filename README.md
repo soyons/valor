@@ -36,8 +36,8 @@ pip install -U phidata
 Create a file `assistant.py`
 
 ```python
-from phi.assistant import Assistant
-from phi.tools.duckduckgo import DuckDuckGo
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
 
 assistant = Assistant(tools=[DuckDuckGo()], show_tool_calls=True)
 assistant.print_response("Whats happening in France?", markdown=True)
@@ -93,8 +93,8 @@ The `PythonAssistant` can achieve tasks by writing and running python code.
 - Create a file `python_assistant.py`
 
 ```python
-from phi.assistant.python import PythonAssistant
-from phi.file.local.csv import CsvFile
+from valor.assistant.python import PythonAssistant
+from valor.file.local.csv import CsvFile
 
 python_assistant = PythonAssistant(
     files=[
@@ -132,7 +132,7 @@ The `DuckDbAssistant` can perform data analysis using SQL.
 
 ```python
 import json
-from phi.assistant.duckdb import DuckDbAssistant
+from valor.assistant.duckdb import DuckDbAssistant
 
 duckdb_assistant = DuckDbAssistant(
     semantic_model=json.dumps({
@@ -175,7 +175,7 @@ Let's create an Movie Assistant to write a `MovieScript` for us.
 from typing import List
 from pydantic import BaseModel, Field
 from rich.pretty import pprint
-from phi.assistant import Assistant
+from valor.assistant import Assistant
 
 class MovieScript(BaseModel):
     setting: str = Field(..., description="Provide a nice setting for a blockbuster movie.")
@@ -250,10 +250,10 @@ docker run -d \
 import typer
 from rich.prompt import Prompt
 from typing import Optional, List
-from phi.assistant import Assistant
-from phi.storage.assistant.postgres import PgAssistantStorage
-from phi.knowledge.pdf import PDFUrlKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
+from valor.assistant import Assistant
+from valor.storage.assistant.postgres import PgAssistantStorage
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
 
 db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
 

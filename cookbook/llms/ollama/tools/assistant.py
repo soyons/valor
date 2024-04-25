@@ -2,11 +2,11 @@ from typing import Optional
 from textwrap import dedent
 from typing import Any, List
 
-from phi.assistant import Assistant
-from phi.llm.ollama import OllamaTools
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.tools.tavily import TavilyTools
-from phi.tools.yfinance import YFinanceTools
+from valor.assistant import Assistant
+from valor.llm.ollama import OllamaTools
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.tools.tavily import TavilyTools
+from valor.tools.yfinance import YFinanceTools
 
 
 def get_local_assistant(

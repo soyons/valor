@@ -3,9 +3,9 @@ import typer
 from typing import Optional
 from rich.prompt import Prompt
 
-from phi.assistant import Assistant
-from phi.knowledge.pdf import PDFUrlKnowledgeBase
-from phi.vectordb.pineconedb import PineconeDB
+from valor.assistant import Assistant
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pineconedb import PineconeDB
 
 api_key = os.getenv("PINECONE_API_KEY")
 index_name = "thai-recipe-index"

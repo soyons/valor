@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.knowledge.pdf import PDFUrlKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
+from valor.assistant import Assistant
+from valor.knowledge.pdf import PDFUrlKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
 
 knowledge_base = PDFUrlKnowledgeBase(
     urls=["https://phi-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf"],

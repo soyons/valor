@@ -41,7 +41,7 @@ k8s = [
 ]
 
 [project.scripts]
-phi = "phi.cli.entrypoint:phi_cli"
+phi = "valor.cli.entrypoint:phi_cli"
 
 [project.urls]
 homepage = "https://phidata.com"

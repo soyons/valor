@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.tools.newspaper4k import Newspaper4k
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.tools.newspaper4k import Newspaper4k
 
 assistant = Assistant(
     tools=[DuckDuckGo(), Newspaper4k()],

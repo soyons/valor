@@ -1,8 +1,8 @@
 from typing import List
 from pydantic import BaseModel, Field
 from rich.pretty import pprint
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
 
 
 class MovieScript(BaseModel):

@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.tools.yfinance import YFinanceTools
-from phi.llm.ollama import Hermes
+from valor.assistant import Assistant
+from valor.tools.yfinance import YFinanceTools
+from valor.llm.ollama import Hermes
 
 assistant = Assistant(
     llm=Hermes(model="adrienbrault/nous-hermes2pro:Q8_0"),

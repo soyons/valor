@@ -2,12 +2,12 @@ from textwrap import dedent
 from typing import Any, List
 
 import streamlit as st
-from phi.assistant import Assistant
-from phi.llm.fireworks import Fireworks
-from phi.tools.exa import ExaTools
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.tools.yfinance import YFinanceTools
-from phi.utils.log import logger
+from valor.assistant import Assistant
+from valor.llm.fireworks import Fireworks
+from valor.tools.exa import ExaTools
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.tools.yfinance import YFinanceTools
+from valor.utils.log import logger
 
 st.set_page_config(
     page_title="Fireworks AI",

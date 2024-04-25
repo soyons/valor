@@ -1,6 +1,6 @@
-from phi.llm.openai import OpenAIChat
-from phi.task.llm import LLMTask
-from phi.assistant import Assistant
+from valor.llm.openai import OpenAIChat
+from valor.task.llm import LLMTask
+from valor.assistant import Assistant
 from pydantic import BaseModel, Field
 
 

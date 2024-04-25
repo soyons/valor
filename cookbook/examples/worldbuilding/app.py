@@ -1,7 +1,7 @@
 from typing import Optional
 
 import streamlit as st
-from phi.tools.streamlit.components import reload_button_sidebar
+from valor.tools.streamlit.components import reload_button_sidebar
 
 from assistant import get_world_builder, get_world_explorer, World  # type: ignore
 from logging import getLogger

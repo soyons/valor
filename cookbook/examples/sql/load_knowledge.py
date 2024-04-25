@@ -1,4 +1,4 @@
-from phi.utils.log import logger
+from valor.utils.log import logger
 from assistant import assistant_knowledge
 
 

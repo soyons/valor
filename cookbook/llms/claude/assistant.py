@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.llm.anthropic import Claude
+from valor.assistant import Assistant
+from valor.tools.duckduckgo import DuckDuckGo
+from valor.llm.anthropic import Claude
 
 assistant = Assistant(
     llm=Claude(model="claude-3-opus-20240229"),

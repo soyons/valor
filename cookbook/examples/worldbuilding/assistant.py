@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
 from pydantic import BaseModel, Field
 
 

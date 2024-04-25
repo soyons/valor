@@ -1,5 +1,5 @@
 import json
-from phi.assistant.duckdb import DuckDbAssistant
+from valor.assistant.duckdb import DuckDbAssistant
 
 data_analyst = DuckDbAssistant(
     semantic_model=json.dumps(

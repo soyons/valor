@@ -1,8 +1,8 @@
 from typing import List
 from pydantic import BaseModel, Field
 from rich.pretty import pprint
-from phi.assistant import Assistant
-from phi.llm.anyscale import Anyscale
+from valor.assistant import Assistant
+from valor.llm.anyscale import Anyscale
 
 
 class MovieScript(BaseModel):

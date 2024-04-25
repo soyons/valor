@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
 
 prompt = "Who are you and who created you? Answer in 1 short sentence."
 temp = 0.3

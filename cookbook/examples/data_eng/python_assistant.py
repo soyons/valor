@@ -1,6 +1,6 @@
 from pathlib import Path
-from phi.assistant.python import PythonAssistant
-from phi.file.local.csv import CsvFile
+from valor.assistant.python import PythonAssistant
+from valor.file.local.csv import CsvFile
 
 python_assistant = PythonAssistant(
     files=[

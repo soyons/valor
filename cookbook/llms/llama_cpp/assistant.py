@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.openai.like import OpenAILike
+from valor.assistant import Assistant
+from valor.llm.openai.like import OpenAILike
 
 assistant = Assistant(
     llm=OpenAILike(base_url="http://localhost:8000/v1"),

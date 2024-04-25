@@ -1,7 +1,7 @@
 from textwrap import dedent
-from phi.assistant.team import Assistant
-from phi.tools.serpapi_toolkit import SerpApiToolkit
-from phi.tools.newspaper_toolkit import NewspaperToolkit
+from valor.assistant.team import Assistant
+from valor.tools.serpapi_toolkit import SerpApiToolkit
+from valor.tools.newspaper_toolkit import NewspaperToolkit
 
 
 searcher = Assistant(

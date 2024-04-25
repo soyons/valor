@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from phi.assistant.duckdb import DuckDbAssistant
+from valor.assistant.duckdb import DuckDbAssistant
 
 # ==== Let's test this sales AI and ask questions about sample sales data
 # ==== Our goal is to test if this can do joins across multiple tables

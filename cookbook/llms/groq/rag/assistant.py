@@ -1,12 +1,12 @@
 from typing import Optional
 
-from phi.assistant import Assistant
-from phi.knowledge import AssistantKnowledge
-from phi.llm.groq import Groq
-from phi.embedder.openai import OpenAIEmbedder
-from phi.embedder.ollama import OllamaEmbedder
-from phi.vectordb.pgvector import PgVector2
-from phi.storage.assistant.postgres import PgAssistantStorage
+from valor.assistant import Assistant
+from valor.knowledge import AssistantKnowledge
+from valor.llm.groq import Groq
+from valor.embedder.openai import OpenAIEmbedder
+from valor.embedder.ollama import OllamaEmbedder
+from valor.vectordb.pgvector import PgVector2
+from valor.storage.assistant.postgres import PgAssistantStorage
 
 db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
 

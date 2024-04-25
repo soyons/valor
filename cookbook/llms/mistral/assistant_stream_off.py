@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.mistral import Mistral
+from valor.assistant import Assistant
+from valor.llm.mistral import Mistral
 
 assistant = Assistant(
     llm=Mistral(model="mistral-large-latest"),

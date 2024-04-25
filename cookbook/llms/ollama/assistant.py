@@ -1,5 +1,5 @@
-from phi.assistant import Assistant
-from phi.llm.ollama import Ollama
+from valor.assistant import Assistant
+from valor.llm.ollama import Ollama
 
 assistant = Assistant(
     llm=Ollama(model="openhermes"),

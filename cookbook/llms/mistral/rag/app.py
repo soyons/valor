@@ -1,12 +1,12 @@
 from typing import List
 
 import streamlit as st
-from phi.assistant import Assistant
-from phi.document import Document
-from phi.document.reader.pdf import PDFReader
-from phi.document.reader.website import WebsiteReader
-from phi.tools.streamlit.components import reload_button_sidebar
-from phi.utils.log import logger
+from valor.assistant import Assistant
+from valor.document import Document
+from valor.document.reader.pdf import PDFReader
+from valor.document.reader.website import WebsiteReader
+from valor.tools.streamlit.components import reload_button_sidebar
+from valor.utils.log import logger
 
 from assistant import get_mistral_assistant  # type: ignore
 

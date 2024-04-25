@@ -1,6 +1,6 @@
-from phi.assistant import Assistant
-from phi.knowledge.wikipedia import WikipediaKnowledgeBase
-from phi.vectordb.pgvector import PgVector2
+from valor.assistant import Assistant
+from valor.knowledge.wikipedia import WikipediaKnowledgeBase
+from valor.vectordb.pgvector import PgVector2
 
 db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
 

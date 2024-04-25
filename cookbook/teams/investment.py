@@ -7,11 +7,11 @@ pip install openai anthropic newspaper3k lxml_html_clean phidata
 
 from pathlib import Path
 from shutil import rmtree
-from phi.assistant.team import Assistant
-from phi.tools.yfinance import YFinanceTools
-from phi.tools.newspaper_toolkit import NewspaperToolkit
-from phi.tools.file import FileTools
-from phi.llm.anthropic import Claude
+from valor.assistant.team import Assistant
+from valor.tools.yfinance import YFinanceTools
+from valor.tools.newspaper_toolkit import NewspaperToolkit
+from valor.tools.file import FileTools
+from valor.llm.anthropic import Claude
 
 
 reports_dir = Path(__file__).parent.parent.parent.joinpath("junk", "reports")

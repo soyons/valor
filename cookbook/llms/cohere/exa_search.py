@@ -1,7 +1,7 @@
-from phi.assistant import Assistant
-from phi.tools.exa import ExaTools
-from phi.tools.website import WebsiteTools
-from phi.llm.cohere import CohereChat
+from valor.assistant import Assistant
+from valor.tools.exa import ExaTools
+from valor.tools.website import WebsiteTools
+from valor.llm.cohere import CohereChat
 
 assistant = Assistant(llm=CohereChat(model="command-r-plus"), tools=[ExaTools(), WebsiteTools()], show_tool_calls=True)
 assistant.print_response(

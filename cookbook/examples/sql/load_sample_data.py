@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from phi.utils.log import logger
+from valor.utils.log import logger
 
 from assistant import db_url
 

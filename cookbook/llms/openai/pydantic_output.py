@@ -1,8 +1,8 @@
 from typing import List
 from pydantic import BaseModel, Field
 from rich.pretty import pprint
-from phi.assistant import Assistant
-from phi.llm.openai import OpenAIChat
+from valor.assistant import Assistant
+from valor.llm.openai import OpenAIChat
 
 
 class MovieScript(BaseModel):
