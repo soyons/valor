@@ -10,19 +10,19 @@ PHI_CLI_DIR: Path = Path.home().resolve().joinpath(".phi")
 
 class PhiCliSettings(BaseSettings):
     app_name: str = "phi"
-    app_version: str = metadata.version("phidata")
+    app_version: str = metadata.version("valor")
 
     tmp_token_path: Path = PHI_CLI_DIR.joinpath("tmp_token")
     config_file_path: Path = PHI_CLI_DIR.joinpath("config.json")
     credentials_path: Path = PHI_CLI_DIR.joinpath("credentials.json")
     ai_conversations_path: Path = PHI_CLI_DIR.joinpath("ai_conversations.json")
     auth_token_cookie: str = "__phi_session"
-    auth_token_header: str = "X-PHIDATA-AUTH-TOKEN"
+    auth_token_header: str = "X-valor-AUTH-TOKEN"
 
     api_runtime: str = "prd"
     api_enabled: bool = True
-    api_url: str = Field("https://api.phidata.com", validate_default=True)
-    signin_url: str = Field("https://phidata.app/login", validate_default=True)
+    api_url: str = Field("https://api.valor.com", validate_default=True)
+    signin_url: str = Field("https://valor.app/login", validate_default=True)
 
     model_config = SettingsConfigDict(env_prefix="PHI_")
 
@@ -44,7 +44,7 @@ class PhiCliSettings(BaseSettings):
         elif api_runtime == "stg":
             return "https://stgvalor.com/login"
         else:
-            return "https://phidata.app/login"
+            return "https://valor.app/login"
 
     @field_validator("api_url", mode="before")
     def update_api_url(cls, v, info: FieldValidationInfo):
@@ -58,7 +58,7 @@ class PhiCliSettings(BaseSettings):
         elif api_runtime == "stg":
             return "https://api.stgvalor.com"
         else:
-            return "https://api.phidata.com"
+            return "https://api.valor.com"
 
 
 phi_cli_settings = PhiCliSettings()

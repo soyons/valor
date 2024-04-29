@@ -204,10 +204,12 @@ class SqlAssistantStorage(AssistantStorage):
 
             try:
                 sess.execute(stmt)
+                sess.commit()
             except OperationalError:
                 # Create table if it does not exist
                 self.create()
                 sess.execute(stmt)
+                sess.commit()
         return self.read(run_id=row.run_id)
 
     def delete(self) -> None:

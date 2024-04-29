@@ -591,7 +591,9 @@ class LLMTask(Task):
                 messages += [user_prompt_message]
         else:
             messages = [Message.model_validate(m) for m in message] if message is not None else []
-
+        for msg in messages:
+            print(msg.role)
+            print(msg.content)
         # -*- Generate run response (includes running function calls)
         task_response = ""
         if stream:

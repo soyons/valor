@@ -17,7 +17,7 @@ def get_logger(logger_name: str) -> logging.Logger:
     )
     rich_handler.setFormatter(
         logging.Formatter(
-            fmt="%(message)s",
+            fmt="%(asctime)s %(filename)s:%(lineno)s - %(message)s",
             datefmt="[%X]",
         )
     )
