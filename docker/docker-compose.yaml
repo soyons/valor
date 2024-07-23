@@ -1,0 +1,41 @@
+version: '3'
+services:
+  redis:
+    image: redis:6-alpine
+    restart: always
+    volumes:
+      # Mount the redis data directory to the container.
+      - ./volumes/redis/data:/data
+    command: redis-server --requirepass valor123456
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+    # uncomment to expose redis port to host
+    ports:
+      - "6379:6379"
+  
+  # The postgres database.
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: valor
+      # The password for the default postgres user.
+      POSTGRES_PASSWORD: valor123456
+      # The name of the default postgres database.
+      POSTGRES_DB: valor_database
+      # postgres data directory
+      PGDATA: /var/lib/postgresql/data/pgdata
+      ALLOW_IP_RANGE: 0.0.0.0
+    volumes:
+      - ./volumes/db/data:/var/lib/postgresql/data
+    # uncomment to expose db(postgresql) port to host
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+  # api:
+  #   image: valor:0.0.1
+  #   restart: always

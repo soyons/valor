@@ -1,0 +1,5 @@
+tmp.py
+**/__pycache__/**
+docker/volumes
+node_modules
+.next
