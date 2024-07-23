@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ shoename }} Sales Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/shoe.css') }}">
+</head>
+<body>
+    <div>
+        <button id="backToMain" name="backToMain" class="btn btn-primary"> 回到主页 </button>
+    </div>
+    
+
+    <!-- 这里是销售数据 -->
+    {% if invalid %}
+        <div>
+            <p> {{ error }} </p>
+        </div>
+    {% else %}
+        <h1 id="shoe-name">{{ shoename }}</h1>
+        <!-- <div class="fillterExpress">
+            <input type="checkbox" name="filterExpressButton" id="filterExpressButton">
+            <text> Only Show Express Data </text>
+        </div> -->
+        <div class="table-container">
+            {% macro latest_info(row, base) %}
+            <td> {{ row[base + '_count'] }} </td>
+            {% set count = row[base + '_count'] %}
+            {% set low_price = "\\" if count == 0 else row[base + '_lowPrice'] %}
+            {% set high_price = "\\" if count == 0 else row[base + '_highPrice'] %}
+            <td> {{ low_price }} </td>
+            <td> {{ high_price }} </td>
+            {% endmacro %}
+            {% macro latest_info_expr(row, base) %}
+                <td> {{ row[base + '_count_expr'] }} </td>  
+                {% set count_expr = row[base + '_count_expr'] %}
+                {% set low_price_expr = "\\" if count_expr == 0 else row[base + '_lowPrice_expr'] %}
+                {% set high_price_expr = "\\" if count_expr == 0 else row[base + '_highPrice_expr'] %}
+                <td> {{ low_price_expr }} </td>
+                <td> {{ high_price_expr }} </td>
+            {% endmacro %}
+            <table>
+                <tr>
+                    <th rowspan="2">Size</th>
+                    <th colspan="3">3 Days Info</th>
+                    <th colspan="3">7 Days Info</th>
+                    <th colspan="3">30 Days Info</th>
+                    <th colspan="3">3 Days Express Info</th>
+                    <th colspan="3">7 Days Express Info</th>
+                    <th colspan="3">30 Days Express Info</th>
+                </tr>
+                <tr>
+                    {% for _ in range(6) %}
+                        <th>count</th>
+                        <th>lowPrice</th>
+                        <th>highPrice</th>
+                    {% endfor %}
+                </tr>
+
+                {% for row in sales_data %}
+                <!-- 这里我们为每一行的数据创建一个表格行 -->
+                <tr>
+                    <td>{{ row['size'] }}</td>
+                    {{ latest_info(row, 'latest_3days') }}
+                    {{ latest_info(row, 'latest_7days') }}
+                    {{ latest_info(row, 'latest_30days') }}
+                    {{ latest_info_expr(row, 'latest_3days') }}
+                    {{ latest_info_expr(row, 'latest_7days') }}
+                    {{ latest_info_expr(row, 'latest_30days') }}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/salesDetail/return_to_main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/salesDetail/ajax_filterExpress.js') }}"></script>
+</body>
+</html>

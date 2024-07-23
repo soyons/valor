@@ -1,0 +1,5 @@
+.btn-primary {
+    padding: 3px 10px; /*降低填充以减小按钮大小 */
+    font-size: 14px; /*减小字体大小*/
+}
+

@@ -1,0 +1,86 @@
+2024-04-30 08:58:57.663 | INFO     | DBServer:_fetch_data:108 - Fetching data from mysql...
+0it [00:00, ?it/s]1it [00:00,  4.93it/s]1484it [00:00, 6130.63it/s]2889it [00:00, 9069.26it/s]4450it [00:00, 11333.69it/s]6030it [00:00, 12810.12it/s]7629it [00:00, 13828.57it/s]9196it [00:00, 14405.60it/s]10789it [00:00, 14876.47it/s]12373it [00:01, 15171.37it/s]13919it [00:01, 14734.87it/s]15516it [00:01, 15099.24it/s]17078it [00:01, 15252.76it/s]18616it [00:01, 15098.67it/s]20204it [00:01, 15326.86it/s]21794it [00:01, 15494.28it/s]23398it [00:01, 15655.46it/s]24989it [00:01, 15729.70it/s]26596it [00:01, 15828.89it/s]28181it [00:02, 15803.92it/s]29781it [00:02, 15860.97it/s]31387it [00:02, 15919.48it/s]32980it [00:02, 15852.50it/s]34566it [00:02, 15735.77it/s]36146it [00:02, 15753.40it/s]37750it [00:02, 15837.20it/s]39348it [00:02, 15878.05it/s]40961it [00:02, 15951.42it/s]42567it [00:02, 15982.60it/s]44166it [00:03, 15975.94it/s]45764it [00:03, 15957.77it/s]47370it [00:03, 15985.61it/s]48969it [00:03, 15917.16it/s]50574it [00:03, 15956.43it/s]52170it [00:03, 15920.33it/s]53763it [00:03, 15867.72it/s]55376it [00:03, 15943.78it/s]56973it [00:03, 15948.86it/s]58573it [00:03, 15961.80it/s]60170it [00:04, 15880.26it/s]61771it [00:04, 15917.25it/s]63367it [00:04, 15929.23it/s]64960it [00:04, 15677.71it/s]66529it [00:04, 15664.63it/s]68099it [00:04, 15672.75it/s]69678it [00:04, 15705.65it/s]71252it [00:04, 15713.59it/s]72847it [00:04, 15782.75it/s]74450it [00:04, 15855.97it/s]76045it [00:05, 15883.60it/s]77650it [00:05, 15931.93it/s]79249it [00:05, 15948.91it/s]80844it [00:05, 15737.96it/s]82445it [00:05, 15816.21it/s]84029it [00:05, 15820.50it/s]85632it [00:05, 15881.22it/s]87239it [00:05, 15937.12it/s]88852it [00:05, 15991.94it/s]90457it [00:05, 16008.25it/s]92058it [00:06, 15978.99it/s]93658it [00:06, 15983.35it/s]95257it [00:06, 15975.41it/s]96855it [00:06, 15659.61it/s]98423it [00:06, 15649.97it/s]100010it [00:06, 15713.65it/s]101618it [00:06, 15820.50it/s]103230it [00:06, 15908.30it/s]104843it [00:06, 15972.68it/s]106446it [00:06, 15986.92it/s]108045it [00:07, 15948.50it/s]109641it [00:07, 15846.48it/s]111250it [00:07, 15917.84it/s]112843it [00:07, 15679.87it/s]114412it [00:07, 15481.97it/s]115962it [00:07, 15365.11it/s]117500it [00:07, 15341.89it/s]119074it [00:07, 15457.27it/s]120342it [00:07, 15338.69it/s]
+0it [00:00, ?it/s]1it [00:00,  6.27it/s]1496it [00:00, 7066.69it/s]2976it [00:00, 10181.08it/s]4231it [00:00, 11045.12it/s]5679it [00:00, 12220.98it/s]7202it [00:00, 13208.28it/s]8732it [00:00, 13874.27it/s]10279it [00:00, 14372.58it/s]11817it [00:00, 14681.35it/s]13355it [00:01, 14892.81it/s]14893it [00:01, 15039.13it/s]16433it [00:01, 15146.90it/s]17973it [00:01, 15221.61it/s]19499it [00:01, 15086.24it/s]21011it [00:01, 14940.33it/s]22508it [00:01, 14940.43it/s]24034it [00:01, 15034.65it/s]25584it [00:01, 15171.73it/s]27115it [00:01, 15210.13it/s]28655it [00:02, 15265.87it/s]30183it [00:02, 15267.10it/s]31711it [00:02, 14777.71it/s]33241it [00:02, 14930.13it/s]34737it [00:02, 14648.59it/s]36256it [00:02, 14806.38it/s]37776it [00:02, 14919.16it/s]39300it [00:02, 15012.23it/s]40840it [00:02, 15124.99it/s]42383it [00:02, 15213.54it/s]43917it [00:03, 15248.54it/s]45452it [00:03, 15275.65it/s]46980it [00:03, 15260.75it/s]48522it [00:03, 15306.40it/s]50053it [00:03, 14943.14it/s]51566it [00:03, 14995.54it/s]53096it [00:03, 15083.21it/s]54639it [00:03, 15184.34it/s]56169it [00:03, 15216.88it/s]57692it [00:03, 15188.34it/s]59237it [00:04, 15265.30it/s]60770it [00:04, 15282.97it/s]62301it [00:04, 15288.61it/s]63832it [00:04, 15294.01it/s]65362it [00:04, 15213.19it/s]66893it [00:04, 15241.05it/s]68428it [00:04, 15272.13it/s]69973it [00:04, 15323.44it/s]71506it [00:04, 15322.30it/s]73051it [00:04, 15359.84it/s]74590it [00:05, 15366.71it/s]76127it [00:05, 15336.71it/s]77661it [00:05, 15182.81it/s]79180it [00:05, 14870.69it/s]80669it [00:05, 14809.29it/s]82178it [00:05, 14889.45it/s]83693it [00:05, 14965.20it/s]85228it [00:05, 15077.20it/s]86766it [00:05, 15166.96it/s]88306it [00:06, 15234.99it/s]89839it [00:06, 15260.62it/s]91366it [00:06, 15256.52it/s]92892it [00:06, 15202.99it/s]94429it [00:06, 15252.44it/s]95955it [00:06, 14952.18it/s]97452it [00:06, 14917.60it/s]98956it [00:06, 14953.20it/s]100499it [00:06, 15092.71it/s]102032it [00:06, 15162.44it/s]103577it [00:07, 15247.63it/s]105106it [00:07, 15259.75it/s]106645it [00:07, 15296.64it/s]108191it [00:07, 15343.65it/s]109727it [00:07, 15348.08it/s]111262it [00:07, 15071.77it/s]112790it [00:07, 15132.64it/s]114328it [00:07, 15204.03it/s]115874it [00:07, 15279.44it/s]117419it [00:07, 15330.10it/s]118965it [00:08, 15367.96it/s]120342it [00:08, 14829.03it/s]
+0it [00:00, ?it/s]1it [00:00,  6.35it/s]1289it [00:00, 6130.22it/s]2495it [00:00, 8526.92it/s]3738it [00:00, 9954.60it/s]5020it [00:00, 10936.23it/s]6315it [00:00, 11598.75it/s]7632it [00:00, 12098.90it/s]8939it [00:00, 12402.17it/s]10227it [00:00, 12549.80it/s]11533it [00:01, 12704.72it/s]12828it [00:01, 12777.78it/s]14142it [00:01, 12885.71it/s]15436it [00:01, 12223.53it/s]16669it [00:01, 12188.53it/s]17895it [00:01, 12175.51it/s]19127it [00:01, 12216.25it/s]20412it [00:01, 12401.62it/s]21722it [00:01, 12608.56it/s]23035it [00:01, 12761.74it/s]24347it [00:02, 12866.95it/s]25652it [00:02, 12920.53it/s]26967it [00:02, 12987.39it/s]28267it [00:02, 12730.60it/s]29560it [00:02, 12788.15it/s]30862it [00:02, 12854.71it/s]32175it [00:02, 12934.25it/s]33481it [00:02, 12969.27it/s]34786it [00:02, 12991.43it/s]36086it [00:02, 12972.85it/s]37401it [00:03, 13025.49it/s]38717it [00:03, 13063.36it/s]40041it [00:03, 13115.85it/s]41353it [00:03, 12897.17it/s]42663it [00:03, 12951.77it/s]43966it [00:03, 12971.94it/s]45288it [00:03, 13044.87it/s]46609it [00:03, 13093.29it/s]47937it [00:03, 13148.13it/s]49256it [00:03, 13158.88it/s]50573it [00:04, 13149.40it/s]51889it [00:04, 13146.49it/s]53208it [00:04, 13157.47it/s]54524it [00:04, 12903.64it/s]55837it [00:04, 12969.35it/s]57150it [00:04, 13016.41it/s]58467it [00:04, 13061.42it/s]59777it [00:04, 13072.42it/s]61094it [00:04, 13101.29it/s]62405it [00:05, 13066.79it/s]63726it [00:05, 13107.64it/s]65037it [00:05, 13090.24it/s]66347it [00:05, 13037.30it/s]67651it [00:05, 12660.85it/s]68931it [00:05, 12699.90it/s]70215it [00:05, 12739.50it/s]71536it [00:05, 12876.85it/s]72848it [00:05, 12946.29it/s]74162it [00:05, 13002.57it/s]75484it [00:06, 13065.99it/s]76806it [00:06, 13109.58it/s]78124it [00:06, 13127.70it/s]79445it [00:06, 13150.14it/s]80761it [00:06, 13068.43it/s]82069it [00:06, 13067.44it/s]83378it [00:06, 13071.51it/s]84696it [00:06, 13103.71it/s]86012it [00:06, 13118.04it/s]87331it [00:06, 13139.33it/s]88645it [00:07, 13139.07it/s]89959it [00:07, 13081.73it/s]91280it [00:07, 13118.47it/s]92605it [00:07, 13155.50it/s]93921it [00:07, 13070.80it/s]95231it [00:07, 13078.63it/s]96541it [00:07, 13082.07it/s]97865it [00:07, 13128.61it/s]99178it [00:07, 13114.58it/s]100497it [00:07, 13136.74it/s]101811it [00:08, 13134.28it/s]103125it [00:08, 13111.01it/s]104442it [00:08, 13126.03it/s]105755it [00:08, 13114.46it/s]107067it [00:08, 12848.83it/s]108354it [00:08, 12797.99it/s]109666it [00:08, 12890.54it/s]110982it [00:08, 12969.98it/s]112297it [00:08, 13022.46it/s]113607it [00:08, 13042.74it/s]114920it [00:09, 13068.45it/s]116228it [00:09, 13071.44it/s]117536it [00:09, 13059.08it/s]118843it [00:09, 12781.60it/s]120147it [00:09, 12857.16it/s]120342it [00:09, 12730.09it/s]
+ * Serving Flask app 'stockxWeb'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:32500
+ * Running on http://10.0.4.14:32500
+[33mPress CTRL+C to quit[0m
+114.132.203.162 - - [30/Apr/2024 13:01:32] "GET /static/resource/logo.png HTTP/1.1" 200 -
+59.36.125.113 - - [30/Apr/2024 13:01:32] "GET /static/resource/logo.png HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:11:58] "GET / HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:11:58] "GET /static/resource/logo.png HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:12:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+116.238.124.194 - - [30/Apr/2024 13:12:22] "GET / HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:12:22] "[36mGET /static/resource/logo.png HTTP/1.1[0m" 304 -
+180.101.245.248 - - [30/Apr/2024 13:12:33] "GET / HTTP/1.1" 200 -
+129.211.166.163 - - [30/Apr/2024 13:12:34] "GET / HTTP/1.1" 200 -
+180.101.245.253 - - [30/Apr/2024 13:12:34] "GET / HTTP/1.1" 200 -
+180.101.245.253 - - [30/Apr/2024 13:12:34] "GET /static/resource/logo.png HTTP/1.1" 200 -
+2024-04-30 13:12:49.278 | INFO     | __main__:show_page:45 - Total skus is 2108
+116.238.124.194 - - [30/Apr/2024 13:12:49] "GET /main?page=1 HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:12:49] "GET /static/css/main.css HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:12:49] "GET /static/css/styles.css HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:12:49] "GET /static/js/main/disable_flip.js HTTP/1.1" 200 -
+2024-04-30 13:20:46.579 | INFO     | __main__:show_page:45 - Total skus is 2108
+116.238.124.194 - - [30/Apr/2024 13:20:46] "GET /main?page=1 HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:20:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:20:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:20:46] "[36mGET /static/js/main/disable_flip.js HTTP/1.1[0m" 304 -
+2024-04-30 13:24:39.300 | INFO     | utils.data_utils:_record:94 - [size_:6, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.300 | INFO     | utils.data_utils:_record:94 - [size_:6, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.300 | INFO     | utils.data_utils:_record:94 - [size_:6, expr:True] there is no sales info in the latest_30days data
+2024-04-30 13:24:39.300 | INFO     | utils.data_utils:_record:94 - [size_:12, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.301 | INFO     | utils.data_utils:_record:94 - [size_:4.5, expr:False] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.301 | INFO     | utils.data_utils:_record:94 - [size_:4.5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.301 | INFO     | utils.data_utils:_record:94 - [size_:4.5, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.302 | INFO     | utils.data_utils:_record:94 - [size_:4.5, expr:True] there is no sales info in the latest_30days data
+2024-04-30 13:24:39.302 | INFO     | utils.data_utils:_record:94 - [size_:6.5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.302 | INFO     | utils.data_utils:_record:94 - [size_:5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.302 | INFO     | utils.data_utils:_record:94 - [size_:5, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.303 | INFO     | utils.data_utils:_record:94 - [size_:5, expr:True] there is no sales info in the latest_30days data
+2024-04-30 13:24:39.303 | INFO     | utils.data_utils:_record:94 - [size_:4, expr:False] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.303 | INFO     | utils.data_utils:_record:94 - [size_:4, expr:False] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.303 | INFO     | utils.data_utils:_record:94 - [size_:4, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.304 | INFO     | utils.data_utils:_record:94 - [size_:4, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.304 | INFO     | utils.data_utils:_record:94 - [size_:4, expr:True] there is no sales info in the latest_30days data
+2024-04-30 13:24:39.304 | INFO     | utils.data_utils:_record:94 - [size_:9.5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.304 | INFO     | utils.data_utils:_record:94 - [size_:7, expr:False] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.304 | INFO     | utils.data_utils:_record:94 - [size_:7, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.305 | INFO     | utils.data_utils:_record:94 - [size_:8, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.305 | INFO     | utils.data_utils:_record:94 - [size_:8, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.305 | INFO     | utils.data_utils:_record:94 - [size_:14, expr:False] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.305 | INFO     | utils.data_utils:_record:94 - [size_:14, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.305 | INFO     | utils.data_utils:_record:94 - [size_:11.5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:11.5, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:5.5, expr:False] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:5.5, expr:False] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:5.5, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:5.5, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:5.5, expr:True] there is no sales info in the latest_30days data
+2024-04-30 13:24:39.306 | INFO     | utils.data_utils:_record:94 - [size_:15, expr:True] there is no sales info in the latest_3days data
+2024-04-30 13:24:39.307 | INFO     | utils.data_utils:_record:94 - [size_:15, expr:True] there is no sales info in the latest_7days data
+2024-04-30 13:24:39.307 | INFO     | utils.data_utils:_record:94 - [size_:15, expr:True] there is no sales info in the latest_30days data
+116.238.124.194 - - [30/Apr/2024 13:24:39] "GET /shoe?shoename=air-jordan-4-retro-bred-reimagined HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:24:39] "GET /static/css/shoe.css HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:24:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:24:39] "GET /static/js/salesDetail/return_to_main.js HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:24:39] "GET /static/js/salesDetail/ajax_filterExpress.js HTTP/1.1" 200 -
+2024-04-30 13:40:17.428 | INFO     | __main__:show_page:45 - Total skus is 2108
+116.238.124.194 - - [30/Apr/2024 13:40:17] "GET /main HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:40:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:40:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:40:17] "[36mGET /static/js/main/disable_flip.js HTTP/1.1[0m" 304 -
+2024-04-30 13:40:20.698 | INFO     | __main__:show_page:45 - Total skus is 2108
+116.238.124.194 - - [30/Apr/2024 13:40:20] "GET /main?page=2 HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 13:40:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:40:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+116.238.124.194 - - [30/Apr/2024 13:40:20] "[36mGET /static/js/main/disable_flip.js HTTP/1.1[0m" 304 -
+2024-04-30 14:20:25.699 | INFO     | __main__:show_page:45 - Total skus is 2108
+59.83.208.105 - - [30/Apr/2024 14:20:25] "GET /main?page=1 HTTP/1.1" 200 -
+193.112.170.234 - - [30/Apr/2024 14:20:25] "GET /static/js/main/disable_flip.js HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 15:40:14] "GET / HTTP/1.1" 200 -
+116.238.124.194 - - [30/Apr/2024 15:40:14] "GET / HTTP/1.1" 200 -

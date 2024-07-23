@@ -1,0 +1,56 @@
+/*********** table-container ********/
+.table-container {
+    margin: 20px 0;
+    overflow-x: auto;  /* 如果表格宽度超过屏幕宽度，显示横向滚动条 */
+}
+
+.table-container table {
+    width: 100%;  /* 让表格尽可能填充父元素 */
+    border-collapse: collapse; /* 合并相邻的边框 */
+}
+
+.table-container th,
+.table-container td {
+    padding: 8px;  /* 为每个表格单元格添加一些填充，让内容与边框之间有一些空间 */
+    text-align: center; /* 左对齐文本 */
+    border-bottom: 1px solid #ddd;  /* 每个表格单元格底部添加一条边框 */
+}
+
+.table-container th {
+    background-color: #f2f2f2;  /* 表头的背景色 */
+}
+
+.table-container tr:hover {
+    background-color: #f5f5f5; /* 当鼠标悬浮在表格行上时，改变背景色 */
+}
+
+/***** back to main *******/
+.btn-primary {
+    padding: 3px 10px; /*降低填充以减小按钮大小 */
+    font-size: 14px; /*减小字体大小*/
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+
+/********** filter express button  ***********/
+.fillterExpress {
+    display: flex;
+    margin: 0 5px;
+    /* align-items: left;
+    justify-content: left;
+    width: 20%;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f2f2f2;
+    border-radius: 10px; */
+}
+
+#filterExpressButton {
+    margin-right: 10px;
+}
+
+/******** shoename *********/
+#shoe-name{
+    margin-left: 5px;
+}

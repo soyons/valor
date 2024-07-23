@@ -1,0 +1,9 @@
+# docker setting 
+DBHOST = "127.0.0.1"
+DBPORT = 3306
+DBUSER = "root"
+DBPASSWORD = "Qq794330684."
+DBDATABASE = "stockx"
+DB_ASKTABLE = "askData"
+DB_SALETABLE = "saleData"
+DB_IDTABLE = "idData"
